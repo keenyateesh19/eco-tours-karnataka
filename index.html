@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Tours Karnataka - Discover Natural Wonders</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/eco-tours-karnataka.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <img src="/eco-tours-karnataka.png" alt="logo" />
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="hero-content">
+          <h1>Discover Karnataka's Natural Wonders</h1>
+          <p>Expert consultancy for eco-tours, treks, and nature experiences</p>
+          <a href="#contact" class="btn">Get Started</a>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">Our Services</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <img src="/western-ghats.jpg" alt="Treks & Adventure Trips" />
+              <div class="service-content">
+                <h3>Treks & Adventure Trips</h3>
+                <p>
+                  Experience the thrill of Karnataka's diverse landscapes
+                  through our expertly guided treks and adventure trips.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1544985361-b420d7a77043?auto=format&fit=crop&q=80&w=1470&h=980"
+                alt="Jungle Safaris"
+              />
+              <div class="service-content">
+                <h3>Jungle Safaris</h3>
+                <p>
+                  Explore the rich wildlife of Karnataka's forests with our
+                  carefully planned jungle safari experiences.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1470&h=980"
+                alt="Garden Establishment"
+              />
+              <div class="service-content">
+                <h3>Garden Establishment</h3>
+                <p>
+                  Transform your space with our expertise in terrace gardens,
+                  herbal gardens, and landscaping services.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1470&h=980"
+                alt="Nature Workshops"
+              />
+              <div class="service-content">
+                <h3>Nature Workshops</h3>
+                <p>
+                  Join our educational workshops on bird watching, bonsai, seed
+                  ball making, and wildlife conservation.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1531386151447-fd76ad50012f?auto=format&fit=crop&q=80&w=1470&h=980"
+                alt="Snake Rescue Training"
+              />
+              <div class="service-content">
+                <h3>Snake Rescue Training</h3>
+                <p>
+                  Learn safe and ethical snake rescue techniques from our
+                  experienced professionals.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?auto=format&fit=crop&q=80&w=1470&h=980"
+                alt="Homestay Consultancy"
+              />
+              <div class="service-content">
+                <h3>Homestay Consultancy</h3>
+                <p>
+                  Get expert guidance on establishing and managing eco-friendly
+                  homestays in Karnataka.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="treks">Treks & Adventure Trips</option>
+                <option value="safaris">Jungle Safaris</option>
+                <option value="gardens">Garden Establishment</option>
+                <option value="workshops">Nature Workshops</option>
+                <option value="snake-rescue">Snake Rescue Training</option>
+                <option value="homestay">Homestay Consultancy</option>
+              </select>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Eco Tours Karnataka. All rights reserved.</p>
+        <p>
+          Contact:
+          <a href="mailto:info@ecotourskarnataka.com"
+            >info@ecotourskarnataka.com</a
+          >
+          | Phone:
+          <a href="tel:+919733090927"> +91 9733090927</a>
+        </p>
+      </div>
+    </footer>
+
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Thank You!</h3>
+        <p>
+          Your message has been sent successfully. We'll get back to you soon.
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
