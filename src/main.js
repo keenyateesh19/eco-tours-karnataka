@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const resend = new Resend(import.meta.env.VITE_RESEND_API);
+const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY);
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -61,12 +61,28 @@ Service Interest: ${service}
 This message was sent from the contact form on ecotourskarnataka.com
   `.trim();
 
-  await resend.emails.send({
-    from: "admin@mail.ecotourskarnataka.com",
-    to: ["yateesh192@gmail.com"],
-    subject: "New Contact Form Submission - Eco Tours Karnataka",
-    text: emailContent,
-  });
+  try {
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${import.meta.env.VITE_RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        from: "admin@mail.ecotourskarnataka.com",
+        to: ["yateesh192@gmail.com"],
+        subject: "New Contact Form Submission - Eco Tours Karnataka",
+        text: emailContent,
+      }),
+    });
 
-  modal.style.display = "block";
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    modal.style.display = "block";
+  } catch (error) {
+    console.error("Error sending email:", error);
+    alert("There was an error sending your message. Please try again later.");
+  }
 }
